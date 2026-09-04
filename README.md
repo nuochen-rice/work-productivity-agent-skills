@@ -28,14 +28,14 @@ Two skills are currently available:
 
 Install a skill directly from this repository:
 
-### Campaign & Survey Retrospective
+### ✍️Campaign & Survey Retrospective
 
 ```bash
 npx skills add nuochen-rice/work-productivity-agent-skills \
   --skill campaign-retrospective-en
 ```
 
-### Lark Whiteboard Generator
+### 🎨Lark Whiteboard Generator
 
 ```bash
 npx skills add nuochen-rice/work-productivity-agent-skills \
@@ -52,7 +52,7 @@ npx skills add nuochen-rice/work-productivity-agent-skills \
 
 > Your agent environment must support the `skills` installer. Lark publishing also requires the corresponding document, spreadsheet, Wiki, and whiteboard integrations.
 
-## Campaign & Survey Retrospective
+## ✍️Campaign & Survey Retrospective
 
 [`campaign-retrospective-en`](campaign-retrospective-en/) turns campaign materials, performance metrics, survey results, and raw user feedback into two standardized deliverables:
 
@@ -67,7 +67,7 @@ Use this skill when you need to:
 - identify low-score or strongly negative feedback;
 - produce an evidence-based retrospective without inventing missing data.
 
-## Lark Whiteboard Generator
+## 🎨Lark Whiteboard Generator
 
 [`lark-whiteboard-gen`](lark-whiteboard-gen/) turns natural-language prompts, documents, or structured information into editable Lark whiteboards.
 
@@ -105,14 +105,14 @@ The skill uses a structured, hand-drawn infographic style while keeping text, sh
 
 可以通过以下命令直接从本仓库安装 Skill。
 
-### 安装宣发与调研复盘 Skill
+### ✍️安装宣发与调研复盘 Skill
 
 ```bash
 npx skills add nuochen-rice/work-productivity-agent-skills \
   --skill campaign-retrospective-en
 ```
 
-### 安装飞书画板生成 Skill
+### 🎨安装飞书画板生成 Skill
 
 ```bash
 npx skills add nuochen-rice/work-productivity-agent-skills \
@@ -129,7 +129,7 @@ npx skills add nuochen-rice/work-productivity-agent-skills \
 
 > 使用环境需要支持 `skills` 安装工具。若需要将结果写入飞书文档、电子表格、知识库或画板，还需要宿主环境提供相应的飞书集成能力和权限。
 
-## 宣发与调研复盘
+## ✍️宣发与调研复盘
 
 [`campaign-retrospective-en`](campaign-retrospective-en/) 可以把活动素材、效果数据、问卷结果和用户原声整理成两项标准化交付物：
 
@@ -144,7 +144,7 @@ npx skills add nuochen-rice/work-productivity-agent-skills \
 - 识别低评分和强烈负面反馈；
 - 在不编造缺失数据的前提下生成结构化复盘。
 
-## 飞书画板生成器
+## 🎨飞书画板生成器
 
 [`lark-whiteboard-gen`](lark-whiteboard-gen/) 可以将自然语言、文档或结构化信息转换成可编辑的飞书画板。
 
