@@ -17,13 +17,14 @@ Reusable AI agent skills for everyday work productivity.
 
 This repository provides reusable AI agent skills for operations, user research, knowledge organization, and visual communication.
 
-Three skills are currently available:
+Four skills are currently available:
 
 | Skill | Description | Best for |
 | --- | --- | --- |
 | [`campaign-retrospective-en`](#campaign-survey-retrospective) | Generates a structured campaign or survey retrospective and cleans raw survey feedback. | Campaign reviews, survey analysis, promotion reviews, and user-feedback synthesis |
 | [`lark-whiteboard-gen`](#lark-whiteboard-generator) | Turns natural-language prompts or documents into editable Lark whiteboards. | Architecture diagrams, process maps, roadmaps, operating models, and knowledge maps |
 | [`report-web-glass`](#report-web-glass) | Turns raw materials into a glassmorphism narrative single-page HTML report (dark / light themes) and deploys it. | Background briefings, project kickoffs, research reports, and stakeholder alignment |
+| [`product-promo-illustration`](#product-promo-illustration) | Produces a cohesive set of bitmap promo illustrations: comic-style in-article graphics, pain-point / capability-benefit visuals, wiki headers, and card images. | Promo comics, in-document figures, header images, card posters, before/after comparisons |
 
 ## Installation
 
@@ -50,13 +51,21 @@ npx skills add nuochen-rice/work-productivity-agent-skills \
   --skill report-web-glass
 ```
 
+### 🎞️Product Promo Illustration
+
+```bash
+npx skills add nuochen-rice/work-productivity-agent-skills \
+  --skill product-promo-illustration
+```
+
 You can also install multiple skills at once:
 
 ```bash
 npx skills add nuochen-rice/work-productivity-agent-skills \
   --skill campaign-retrospective-en \
   --skill lark-whiteboard-gen \
-  --skill report-web-glass
+  --skill report-web-glass \
+  --skill product-promo-illustration
 ```
 
 > Your agent environment must support the `skills` installer. Lark publishing also requires the corresponding document, spreadsheet, Wiki, and whiteboard integrations.
@@ -65,7 +74,7 @@ npx skills add nuochen-rice/work-productivity-agent-skills \
 
 ## ✍️Campaign & Survey Retrospective
 
-[`campaign-retrospective-en`](campaign-retrospective-en/) turns campaign materials, performance metrics, survey results, and raw user feedback into two standardized deliverables:
+`campaign-retrospective-en` turns campaign materials, performance metrics, survey results, and raw user feedback into two standardized deliverables:
 
 1. A cleaned survey workbook containing `Valid Feedback` and `Low-score Feedback` sheets.
 2. A structured Lark Wiki retrospective covering key conclusions, campaign performance, user feedback, and follow-up actions.
@@ -82,7 +91,7 @@ Use this skill when you need to:
 
 ## 🎨Lark Whiteboard Generator
 
-[`lark-whiteboard-gen`](lark-whiteboard-gen/) turns natural-language prompts, documents, or structured information into editable Lark whiteboards.
+`lark-whiteboard-gen` turns natural-language prompts, documents, or structured information into editable Lark whiteboards.
 
 It automatically follows the language of the prompt and supports Chinese, English, and explicitly requested bilingual boards.
 
@@ -101,7 +110,7 @@ The skill uses a structured, hand-drawn infographic style while keeping text, sh
 
 ## 🪟Report Web Glass
 
-[`report-web-glass`](report-web-glass/) turns raw materials — documents, research notes, data, interview quotes — into a single-page HTML report in a glassmorphism "narrative long-page" style, then deploys it to a shareable link.
+`report-web-glass` turns raw materials — documents, research notes, data, interview quotes — into a single-page HTML report in a glassmorphism "narrative long-page" style, then deploys it to a shareable link.
 
 It organizes content in an easy-to-follow narrative order (analogy → concept → structure → judgment → next steps), so readers without background knowledge can understand a complex topic. Every page ships with a scroll progress bar, sticky navigation, reveal-on-scroll animations, and a searchable glossary.
 
@@ -119,6 +128,26 @@ Use this skill when you need to:
 
 Not for: full web apps requiring login / backend / multiple routes, or charts meant to be embedded inside a Lark document.
 
+<a id="product-promo-illustration"></a>
+
+## 🎞️Product Promo Illustration
+
+`product-promo-illustration` distills product copy (pain point → platform action → benefit) into a cohesive set of bitmap illustrations ready to drop into documents, group cards, or pages.
+
+Key defaults and options:
+
+- **Formats**: article comic 16:9, card image 4:3, wiki/document header 5:1, banner 3:1, or a custom ratio.
+- **Characters**: clay 3D business person by default; an optional tech-staff persona; flat vector as an alternative style tier.
+- **Palette**: blue-and-white by default, with restrained semantic colors (red for pain points, blue-green for positive outcomes, gray for secondary).
+- **Templates**: three-panel side by side, left-right comparison, horizontal three-stage, stacked two-section, and text-left/image-right header.
+
+Use this skill when you need to:
+
+- draw a promo comic or in-document figure;
+- build a header image or card poster;
+- produce a before/after comparison;
+- extend a series in the same style, or iterate on an existing illustration's background, copy, or layout.
+
 <p align="right"><a href="#work-productivity-agent-skills">Back to top ↑</a></p>
 
 ---
@@ -129,13 +158,14 @@ Not for: full web apps requiring login / backend / multiple routes, or charts me
 
 这个仓库提供面向日常工作提效的 AI Agent Skills，适用于运营复盘、用户调研、知识整理和可视化表达等场景。
 
-目前提供三个 Skill：
+目前提供四个 Skill：
 
 | Skill | 能力说明 | 适用场景 |
 | --- | --- | --- |
 | [`campaign-retrospective-en`](#宣发与调研复盘) | 生成结构化活动或调研复盘，并清洗原始问卷反馈。 | 活动复盘、调研分析、宣发复盘、用户反馈分析 |
 | [`lark-whiteboard-gen`](#飞书画板生成器) | 将自然语言或文档转换成可编辑的飞书画板。 | 产品架构、流程图、路线图、运营模型、知识地图 |
 | [`report-web-glass`](#报告式玻璃拟态长页) | 将现有材料整理成玻璃拟态叙事长页 HTML 报告（深色 / 浅色主题），并部署成可访问链接。 | 背景说明、项目 kickoff、调研报告、方案对齐 |
+| [`product-promo-illustration`](#产品宣传漫画配图) | 生成成套位图宣传插画：文章漫画配图、痛点 / 能力收益图、wiki 头图与卡片图。 | 宣传漫画、文档配图、头图、卡片海报、前后对比 |
 
 ## 安装方式
 
@@ -162,13 +192,21 @@ npx skills add nuochen-rice/work-productivity-agent-skills \
   --skill report-web-glass
 ```
 
+### 🎞️安装产品宣传漫画配图 Skill
+
+```bash
+npx skills add nuochen-rice/work-productivity-agent-skills \
+  --skill product-promo-illustration
+```
+
 也可以一次安装多个 Skill：
 
 ```bash
 npx skills add nuochen-rice/work-productivity-agent-skills \
   --skill campaign-retrospective-en \
   --skill lark-whiteboard-gen \
-  --skill report-web-glass
+  --skill report-web-glass \
+  --skill product-promo-illustration
 ```
 
 > 使用环境需要支持 `skills` 安装工具。若需要将结果写入飞书文档、电子表格、知识库或画板，还需要宿主环境提供相应的飞书集成能力和权限。
@@ -177,7 +215,7 @@ npx skills add nuochen-rice/work-productivity-agent-skills \
 
 ## ✍️宣发与调研复盘
 
-[`campaign-retrospective-en`](campaign-retrospective-en/) 可以把活动素材、效果数据、问卷结果和用户原声整理成两项标准化交付物：
+`campaign-retrospective-en` 可以把活动素材、效果数据、问卷结果和用户原声整理成两项标准化交付物：
 
 1. 一份包含 `Valid Feedback`（有效反馈）和 `Low-score Feedback`（低分反馈）的问卷清洗表格。
 2. 一篇包含重点结论、活动效果、用户反馈和后续行动的飞书 Wiki 复盘文档。
@@ -194,7 +232,7 @@ npx skills add nuochen-rice/work-productivity-agent-skills \
 
 ## 🎨飞书画板生成器
 
-[`lark-whiteboard-gen`](lark-whiteboard-gen/) 可以将自然语言、文档或结构化信息转换成可编辑的飞书画板。
+`lark-whiteboard-gen` 可以将自然语言、文档或结构化信息转换成可编辑的飞书画板。
 
 它会自动跟随用户输入的语言，并支持中文、英文以及用户明确要求的双语画板。
 
@@ -213,7 +251,7 @@ npx skills add nuochen-rice/work-productivity-agent-skills \
 
 ## 🪟报告式玻璃拟态长页
 
-[`report-web-glass`](report-web-glass/) 可以把现有材料——文档、调研笔记、数据、访谈原声——整理成一份「玻璃拟态 · 叙事长页」风格的单页 HTML 报告，并部署成可分享的链接。
+`report-web-glass` 可以把现有材料——文档、调研笔记、数据、访谈原声——整理成一份「玻璃拟态 · 叙事长页」风格的单页 HTML 报告，并部署成可分享的链接。
 
 它按「先类比 → 再概念 → 再结构 → 再判断 → 再下一步」的叙事顺序组织内容，让没有背景知识的读者也能读懂一件复杂的事。每个页面都自带滚动进度条、吸顶导航、渐显动画和可搜索的术语速查。
 
@@ -230,6 +268,26 @@ npx skills add nuochen-rice/work-productivity-agent-skills \
 - 把零散材料整理成一份好看、可分享的网页。
 
 不适用于：需要登录 / 后端 / 多路由的完整 Web 应用，或要嵌进飞书文档的图表。
+
+<a id="产品宣传漫画配图"></a>
+
+## 🎞️产品宣传漫画配图
+
+`product-promo-illustration` 把产品文案（痛点 → 平台动作 → 收益）提炼成成套位图插画，可直接放入文档、群卡片或页面。
+
+默认参数与可选项：
+
+- **画幅**：文章漫画 16:9、卡片图 4:3、wiki/文档头图 5:1、banner 3:1，也支持自定义比例。
+- **人物**：默认黏土 3D 商务人，可选科技工作人员档；扁平矢量为备选风格。
+- **配色**：默认蓝白体系，语义色克制使用（红=痛点、蓝绿=正向、灰=次要）。
+- **模板**：三格并列、左右对比、横向三段、上下两段、左文右图头图。
+
+适合以下场景：
+
+- 绘制宣传漫画或文档配图；
+- 制作头图或卡片海报；
+- 生成前后对比图；
+- 按同一风格延展成套图，或对已有插画的底色、文字、布局做迭代。
 
 <p align="right"><a href="#work-productivity-agent-skills">返回顶部 ↑</a></p>
 
